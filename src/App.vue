@@ -14,11 +14,7 @@ import HelloWorld from './components/HelloWorld.vue';
     HelloWorld,
   },
 })
-export default class App extends Vue {
-  mounted() {
-    console.log("l;alala");
-  }
-}
+export default class App extends Vue {}
 </script>
 
 <style lang="scss">
