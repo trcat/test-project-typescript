@@ -37,8 +37,8 @@
 </template>
 
 <script lang="ts">
-import centerContainer from '@/components/centerContainer.vue';
 import { Component, Vue } from 'vue-property-decorator';
+import centerContainer from '@/components/centerContainer.vue';
 import API, { FindPwdData } from '@/rest/find-password';
 
 const buttonName = '发送验证码至邮箱';
