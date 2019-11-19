@@ -8,8 +8,8 @@
     </el-container>
 </template>
 
-<script>
-import {Component, VueDecorator} from 'vue-property-decorator';
+<script lang="ts">
+import {Component, Vue} from 'vue-property-decorator';
 
 @Component
 export default class CenterContainer extends Vue {}
