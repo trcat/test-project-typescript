@@ -1,5 +1,5 @@
+import './class-component-hooks';
 import Vue from 'vue';
-import App from './App.vue';
 import router from './router';
 import store from './store';
 import * as ElementUI from 'element-ui';
@@ -25,4 +25,4 @@ new Vue({
         }
     });
   },
-}).$mount('#app');
+}).$mount('#main');

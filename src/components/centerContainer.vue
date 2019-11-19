@@ -9,9 +9,9 @@
 </template>
 
 <script>
-import {Component, VueDecorator} from "vue-class-component";
+import {Component, VueDecorator} from 'vue-property-decorator';
 
 @Component
-export default class centerContainer extends Vue {}
+export default class CenterContainer extends Vue {}
 </script>
 
