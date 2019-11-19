@@ -25,4 +25,4 @@ new Vue({
         }
     });
   },
-}).$mount('#main');
+}).$mount('#app');
