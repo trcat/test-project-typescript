@@ -42,7 +42,7 @@ import centerContainer from '@/components/centerContainer.vue';
 import API, { FindPwdData } from '@/rest/find-password';
 
 const buttonName = '发送验证码至邮箱';
-let timer = null;
+let timer: any = null;
 let count = 60;
 
 @Component({
@@ -113,6 +113,10 @@ export default class FindPassword extends Vue {
     private reset() {
         this.disabled = false;
         this.loading = false;
+        this.buttonName = buttonName;
+        clearInterval(timer);
+        count = 60;
+        timer = null;
     }
 }
 

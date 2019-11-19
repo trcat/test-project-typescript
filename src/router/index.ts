@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Login from '@/views/Login.vue';
 import FindPassword from '@/views/FindPassword.vue';
+import ModifyPassword from '@/views/ModifyPassword.vue';
 
 Vue.use(VueRouter);
 
@@ -15,6 +16,9 @@ const routes = [
   }, {
     path: '/find-password',
     component: FindPassword,
+  }, {
+    path: '/modify-password',
+    component: ModifyPassword,
   },
 ];
 
