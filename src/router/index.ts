@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 import Login from '@/views/Login.vue';
 import FindPassword from '@/views/FindPassword.vue';
 import ModifyPassword from '@/views/ModifyPassword.vue';
+import User from '@/views/User.vue';
 
 Vue.use(VueRouter);
 
@@ -19,6 +20,9 @@ const routes = [
   }, {
     path: '/modify-password',
     component: ModifyPassword,
+  }, {
+    path: '/user',
+    component: User,
   },
 ];
 

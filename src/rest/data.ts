@@ -4,6 +4,10 @@ export interface ReturnObj {
     code: string;
 }
 
+export interface ResultObj extends ReturnObj {
+    data: null;
+}
+
 /** User */
 type UserIdentity = 'student' | 'teacher' | 'admin';
 type UserGender = 'male' | 'female';
