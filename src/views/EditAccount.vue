@@ -122,7 +122,7 @@ export default class EditAccount extends Vue {
                 }
 
                 this.reset();
-            }
+            };
 
             this.onLoading();
             API.searchUser(this.searchValue, callback);
