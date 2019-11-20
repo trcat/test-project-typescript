@@ -56,7 +56,7 @@ import centerContainer from '@/components/centerContainer.vue';
 import $ from 'jquery';
 import 'jquery.cookie';
 import API, { TokenData } from '@/rest/login';
-import AjaxHelper from '@/rest/ajax-helper';
+import AjaxHelper from '@/helper/ajax-helper';
 import { TooltipEffect } from 'element-ui/types/tooltip';
 
 const STYLE = {

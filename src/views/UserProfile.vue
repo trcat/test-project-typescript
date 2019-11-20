@@ -66,7 +66,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import API, { ResultData } from '@/rest/user-profile';
-import { UserData, UserIdentity} from '@/rest/data';
+import { UserData, UserIdentity} from '@/data';
 
 interface ProfileData {
     name: string;

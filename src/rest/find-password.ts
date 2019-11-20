@@ -1,5 +1,5 @@
-import AjaxHelper from './ajax-helper';
-import { ReturnData } from './data';
+import AjaxHelper from '@/helper/ajax-helper';
+import { ReturnData } from '@/data';
 
 export interface FindPwdData extends ReturnData {
     data: string;

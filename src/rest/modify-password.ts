@@ -1,5 +1,5 @@
-import AjaxHelper from './ajax-helper';
-import { ResultObj } from './data';
+import AjaxHelper from '@/helper/ajax-helper';
+import { ResultObj } from '@/data';
 
 export default class API {
     public static modifyPassword(data: string, callback: (data: ResultObj) => void) {

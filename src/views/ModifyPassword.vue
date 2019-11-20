@@ -16,7 +16,7 @@
 import { Component, Vue } from 'vue-property-decorator';
 import centerContainer from '@/components/centerContainer.vue';
 import API from '@/rest/modify-password';
-import { ResultObj } from '@/rest/data';
+import { ResultObj } from '@/data';
 
 const buttonName = '发送重置密码至邮箱';
 let timer: any = null;

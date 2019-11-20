@@ -1,5 +1,5 @@
-import AjaxHelper from './ajax-helper';
-import { ReturnData, UserData } from './data';
+import AjaxHelper from '@/helper/ajax-helper';
+import { ReturnData, UserData } from '@/data';
 
 
 interface BaseLoginData {

@@ -1,5 +1,5 @@
-import AjaxHelper from './ajax-helper';
-import { UserData, ReturnData } from './data';
+import AjaxHelper from '@/helper/ajax-helper';
+import { UserData, ReturnData } from '@/data';
 
 export interface ResultData extends ReturnData  {
     data: UserData;
