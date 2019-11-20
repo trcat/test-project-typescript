@@ -15,7 +15,8 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import centerContainer from '@/components/centerContainer.vue';
-import API, { ResultData } from '@/rest/modify-password';
+import API from '@/rest/modify-password';
+import { ResultObj } from '@/rest/data';
 
 const buttonName = '发送重置密码至邮箱';
 let timer: any = null;
@@ -34,7 +35,7 @@ export default class ModifyPassword extends Vue {
     // methods
     private getResetPassword() {
         const data = localStorage.getItem('modifyPasswordData') as string;
-        const callback = (r: ResultData) => {
+        const callback = (r: ResultObj) => {
             if (!r.state) {
                 alert(r.message);
                 this.reset();
