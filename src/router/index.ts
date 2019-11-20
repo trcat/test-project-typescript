@@ -6,6 +6,7 @@ import ModifyPassword from '@/views/ModifyPassword.vue';
 import User from '@/views/User.vue';
 import UserProfile from '@/views/UserProfile.vue';
 import AddAccount from '@/views/AddAccount.vue';
+import EditAccount from '@/views/EditAccount.vue';
 
 Vue.use(VueRouter);
 
@@ -42,6 +43,13 @@ const routes = [
         meta: {
             activeMenu: '/user',
             subActiveMenu: '/user/add-account',
+        },
+      }, {
+        path: 'edit-account',
+        component: EditAccount,
+        meta: {
+            activeMenu: '/user',
+            subActiveMenu: '/user/edit-account',
         },
       },
     ],
