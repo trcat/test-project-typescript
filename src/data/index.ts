@@ -37,3 +37,7 @@ export interface ClassData {
 export interface ClassListResultData extends ReturnData {
     data: ClassData[];
 }
+
+export interface ClassResultData extends ReturnData {
+    data: ClassData;
+}
