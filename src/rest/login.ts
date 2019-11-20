@@ -1,5 +1,5 @@
 import AjaxHelper from './ajax-helper';
-import { ReturnObj, UserData } from './data';
+import { ReturnData, UserData } from './data';
 
 
 interface BaseLoginData {
@@ -14,7 +14,7 @@ interface EmailLoginData extends BaseLoginData {
     email: string;
 }
 
-export interface TokenData extends ReturnObj {
+export interface TokenData extends ReturnData {
     token: string;
     data: UserData;
 }

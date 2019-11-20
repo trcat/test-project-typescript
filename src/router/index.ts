@@ -4,6 +4,7 @@ import Login from '@/views/Login.vue';
 import FindPassword from '@/views/FindPassword.vue';
 import ModifyPassword from '@/views/ModifyPassword.vue';
 import User from '@/views/User.vue';
+import UserProfile from '@/views/UserProfile.vue';
 
 Vue.use(VueRouter);
 
@@ -23,6 +24,19 @@ const routes = [
   }, {
     path: '/user',
     component: User,
+    meta: {
+      activeMenu: '/user',
+    },
+    children: [
+      {
+        path: '',
+        component: UserProfile,
+        meta: {
+          activeMenu: '/user',
+          subActiveMenu: '/User',
+        },
+      },
+    ],
   },
 ];
 
