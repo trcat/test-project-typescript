@@ -76,7 +76,7 @@ export default class User extends Vue {
         window.onbeforeunload = () => {
             this.cancel();
             return  '离开此页面会或清理 cookie，页面部分行为会出错，是否继续?';
-        }
+        };
     }
     // computed
     private get userName() {
@@ -114,7 +114,7 @@ export default class User extends Vue {
             } else {
                 this.$message({
                     message: r.message,
-                    type: 'error'
+                    type: 'error',
                 });
             }
             this.mainLoading = false;
