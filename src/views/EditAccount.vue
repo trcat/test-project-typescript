@@ -197,6 +197,7 @@ export default class EditAccount extends Vue {
                     }
 
                     this.reset();
+                    this.editProfile = false;
                 };
 
                 this.onLoading();
