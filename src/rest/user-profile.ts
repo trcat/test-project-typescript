@@ -1,12 +1,8 @@
 import AjaxHelper from '@/helper/ajax-helper';
-import { UserData, ReturnData } from '@/data';
-
-export interface ResultData extends ReturnData  {
-    data: UserData;
-}
+import { UserData, UserResultData } from '@/data';
 
 export default class API {
-    public static saveProfile(data: UserData, callback: (r: ResultData) => void) {
+    public static saveProfile(data: UserData, callback: (r: UserResultData) => void) {
         AjaxHelper.ajax({
             url: `/user/userInfo/${data.id}/`,
             type: 'put',
@@ -15,7 +11,7 @@ export default class API {
             success: callback,
         });
     }
-    public static savePassword(data: UserData, callback: (r: ResultData) => void) {
+    public static savePassword(data: UserData, callback: (r: UserResultData) => void) {
         AjaxHelper.ajax({
             url: `/user/userInfo/${data.id}/`,
             type: 'put',

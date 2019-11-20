@@ -4,13 +4,13 @@ export interface ReturnData {
     code: string;
 }
 
-export interface ResultObj extends ReturnData {
+export interface ResultData extends ReturnData {
     data: null;
 }
 
 /** User */
 export type UserIdentity = 'student' | 'teacher' | 'admin';
-type UserGender = 'male' | 'female';
+export type UserGender = 'male' | 'female';
 
 export interface UserData {
     identity: UserIdentity;
@@ -22,4 +22,18 @@ export interface UserData {
     my_class?: string; // 只有学生用户才会有该属性，值为班级 id
     old_password?: string; // 修改密码时才会有它
     new_password?: string; // 修改密码时才会有它
+}
+
+export interface UserResultData extends ReturnData {
+    data: UserData;
+}
+
+/** Class */
+export interface ClassData {
+    class_name: string;
+    id?: string; // 创建班级时不会有该属性
+}
+
+export interface ClassListResultData extends ReturnData {
+    data: ClassData[];
 }

@@ -1,8 +1,8 @@
 import AjaxHelper from '@/helper/ajax-helper';
-import { ResultObj } from '@/data';
+import { ResultData } from '@/data';
 
 export default class API {
-    public static modifyPassword(data: string, callback: (data: ResultObj) => void) {
+    public static modifyPassword(data: string, callback: (data: ResultData) => void) {
         const ajaxObject = {
             url: `/user/resetPwd/?token=${data}`,
             type: 'get',

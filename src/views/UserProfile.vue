@@ -65,8 +65,8 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import API, { ResultData } from '@/rest/user-profile';
-import { UserData, UserIdentity} from '@/data';
+import API from '@/rest/user-profile';
+import { UserData, UserIdentity, UserResultData } from '@/data';
 
 interface ProfileData {
     name: string;
@@ -139,7 +139,7 @@ export default class UserProfile extends Vue {
         const el: any = this.$refs[formName];
         el.validate((valid: any) => {
             if (valid) {
-                const callback = (r: ResultData) => {
+                const callback = (r: UserResultData) => {
                     if (r.state) {
                         // 成功，更新返回的 user data 数据至 store
                         this.$store.commit('updateUser', r.data);
@@ -188,7 +188,7 @@ export default class UserProfile extends Vue {
                     return false;
                 }
 
-                const callback = (r: ResultData) => {
+                const callback = (r: UserResultData) => {
                     if (r.state) {
                         // 成功，则显示修改密码成功
                         this.$message({
