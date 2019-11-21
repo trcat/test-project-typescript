@@ -108,14 +108,14 @@ interface OptionListData {
     [key: string]: OptionData;
 }
 
-interface QuestionEditData {
-    id: string;
+export interface QuestionEditData {
     content: string;
     type: QuestionType;
     score: string;
     options: OptionListData;
     answer: string[];
     description: string;
+    id?: string;
 }
 
 export default class AddTest extends Vue {

@@ -94,3 +94,53 @@ export interface CreateTestData extends PageListData {
 export interface CreateTestResultData extends ReturnData {
     data: CreateTestData;
 }
+
+export interface TestProfileData {
+    id: string;
+    name: string;
+    question_number: number;
+    total: number;
+    user: string;
+}
+
+export interface TestListData extends PageListData {
+    data: TestProfileData[];
+}
+
+export interface TestListResultData extends ReturnData {
+    data: TestListData;
+}
+
+export interface QuestionPageListData extends PageListData {
+    id: string;
+    classes: string[];
+    add_time: string;
+    test_time: number;
+    start_time: string;
+    paperLib: string;
+    data: QuestionData[];
+}
+
+export interface QuestionPageListResultData extends ReturnData {
+    data: QuestionPageListData;
+}
+
+// dispatch
+export interface DispatchData {
+    user_id: string;
+    start_time: Date;
+    test_time: number;
+    classes: string[];
+    paperLib?: string;
+}
+
+export interface DispatchResultData extends ReturnData {
+    data: {
+        id: string;
+        classes: string[];
+        add_time: string;
+        test_time: number;
+        start_time: string;
+        paperLib: string;
+    };
+}
