@@ -172,3 +172,44 @@ export interface StudentScoreData {
 export interface StudentScoreResultData extends ReturnData {
     data: StudentScoreData;
 }
+
+// view
+export interface ViewData {
+    id: string;
+    classes: string[];
+    add_time: string;
+    test_time: number;
+    start_time: string;
+    paperLib: {
+        id: string;
+        name: string;
+        question_number: number;
+        total: number;
+        user: string;
+    };
+    user: string;
+    questions: QuestionData[];
+}
+
+export interface ViewResultData extends ReturnData {
+    data: ViewData[];
+}
+
+// test
+export interface TestScoreData {
+    get_score: number;
+    user: UserData;
+    paper: {
+        id: string;
+        classes: string[];
+        add_time: string;
+        test_time: string;
+        start_time: string;
+        paperLib: number;
+        user: string;
+    };
+}
+
+export interface TestScoreResultData extends ReturnData {
+    data: TestScoreData;
+}
