@@ -189,6 +189,7 @@ import {
 DispatchResultData} from '@/data';
 import { QuestionEditData } from '@/views/AddTest.vue';
 
+@Component
 export default class EditTest extends Vue {
     private papers: TestProfileData[] = [];
     private total = 0;

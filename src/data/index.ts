@@ -144,3 +144,31 @@ export interface DispatchResultData extends ReturnData {
         paperLib: string;
     };
 }
+
+// score
+export interface ClassMemberScoreData {
+    user: string;
+    user_name: string;
+    get_score: number;
+    class: string;
+}
+
+export interface ClassScorePageListData extends PageListData {
+    data: ClassMemberScoreData[];
+}
+
+export interface ClassScorePageListResultData extends ReturnData {
+    data: ClassScorePageListData;
+}
+
+export interface StudentScoreData {
+    score: number;
+    paperLib: TestData;
+    user_answer: {
+        [key: string]: string[];
+    };
+}
+
+export interface StudentScoreResultData extends ReturnData {
+    data: StudentScoreData;
+}

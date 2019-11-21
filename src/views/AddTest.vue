@@ -118,6 +118,7 @@ export interface QuestionEditData {
     id?: string;
 }
 
+@Component
 export default class AddTest extends Vue {
     // data
     private testForm = {

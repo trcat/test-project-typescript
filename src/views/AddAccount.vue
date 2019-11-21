@@ -47,6 +47,7 @@ import { Component, Vue } from 'vue-property-decorator';
 import API from '@/rest/add-account';
 import { ClassListResultData, ClassData, UserResultData, UserData, UserIdentity, UserGender } from '@/data';
 
+@Component
 export default class AddAccount extends Vue {
     // data
     private form = {
