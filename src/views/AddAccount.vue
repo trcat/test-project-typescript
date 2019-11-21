@@ -52,7 +52,7 @@ export default class AddAccount extends Vue {
     private form = {
         identity: 'student' as UserIdentity,
         class: null as string | null,
-        classOptions: [] as any[],
+        classOptions: [] as Array<{value: string; label: string}>,
         id: '',
         name: '',
         gender: 'male' as UserGender,

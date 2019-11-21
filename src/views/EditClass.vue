@@ -78,7 +78,7 @@ export default class EditClass extends Vue {
     private searchMemberValue = '';
     private disabled = false;
     private loading = false;
-    private classes: any[] = [];
+    private classes: ClassData[] = [];
     private member: UserData | null = null;
     private showEditClassDialog = false;
     private showAddMemberDialog = false;
@@ -86,7 +86,7 @@ export default class EditClass extends Vue {
     private editClassForm = {
         id: '',
         class_name: '',
-        classMembers: [] as any[],
+        classMembers: [] as UserData[],
     };
     private editClassFormRules = {
         class_name: [{
@@ -139,7 +139,7 @@ export default class EditClass extends Vue {
             });
 
             if (r.state) {
-                const newClass: any[] = [];
+                const newClass: ClassData[] = [];
                 this.classes.forEach((i) => {
                     if (i.id !== classData.id) {
                         newClass.push(i);
@@ -184,7 +184,7 @@ export default class EditClass extends Vue {
             });
 
             if (r.state) {
-                const members: any[] = [];
+                const members: UserData[] = [];
                 this.editClassForm.classMembers.forEach((i) => {
                     if (i.id !== memberData.id) {
                         members.push(i);

@@ -58,3 +58,39 @@ export interface MemberPageListData extends PageListData {
 export interface MemberPageListReturnData extends ReturnData {
     data: MemberPageListData;
 }
+
+// test
+export type QuestionType = 'single' | 'multiple';
+
+export interface QuestionData {
+    type: QuestionType;
+    content: string;
+    score: number;
+    options: string[];
+    answer: string[];
+    description: string;
+    id?: string; // 创建试卷时无该属性
+    user_answer?: string[]; // 学生考试提交试卷和查看考试结果时才会有该属性
+    paperLib?: string; // 后端传给前端的数据会有该属性，表明该试题属于哪张卷子
+}
+
+export interface TestData {
+    name: string;
+    question_number: number;
+    total: number;
+    questions: QuestionData[];
+    id?: string; // 创建试卷时无该属性
+}
+
+export interface CreateTestData extends PageListData {
+    id: string;
+    name: string;
+    question_number: number;
+    total: number;
+    user: string;
+    data: QuestionData[];
+}
+
+export interface CreateTestResultData extends ReturnData {
+    data: CreateTestData;
+}

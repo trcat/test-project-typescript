@@ -73,7 +73,7 @@ interface ProfileData {
     phone: string;
     email: string;
     gender: string;
-    class?: string;
+    class?: string | null;
     identity: UserIdentity;
     id?: string;
     oldPassword?: string;

@@ -9,6 +9,7 @@ import AddAccount from '@/views/AddAccount.vue';
 import EditAccount from '@/views/EditAccount.vue';
 import AddClass from '@/views/AddClass.vue';
 import EditClass from '@/views/EditClass.vue';
+import AddTest from '@/views/AddTest.vue';
 
 Vue.use(VueRouter);
 
@@ -66,6 +67,13 @@ const routes = [
         meta: {
             activeMenu: '/user/',
             subActiveMenu: '/user/edit-class',
+        },
+      }, {
+        path: 'add-test',
+        component: AddTest,
+        meta: {
+            activeMenu: '/user/',
+            subActiveMenu: '/user/add-test',
         },
       },
     ],

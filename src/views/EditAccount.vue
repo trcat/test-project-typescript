@@ -85,7 +85,7 @@ export default class EditAccount extends Vue {
         gender: 'male' as UserGender,
         phone: '',
         email: '',
-        classOptions: [] as any[],
+        classOptions: [] as Array<{value: string; label: string}>,
     };
     private loadingClassOptions = false;
     private rules = {
@@ -150,7 +150,7 @@ export default class EditAccount extends Vue {
                 if (r.state) {
                     this.editForm.classOptions = r.data.map((c) => {
                         return {
-                            value: c.id,
+                            value: c.id as string,
                             label: c.class_name,
                         };
                     });
